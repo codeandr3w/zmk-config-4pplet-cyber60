@@ -102,6 +102,10 @@
     };
 };
 
+&mt {
+    tapping-term-ms = <200>; // This is the value already set by default
+};
+
 &usbd {
     cdc_acm_uart: cdc_acm_uart {
         compatible = "zephyr,cdc-acm-uart";
