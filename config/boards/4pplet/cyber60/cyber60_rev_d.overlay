@@ -62,6 +62,15 @@
         };
     };
 
+    indicators {
+        compatible = "zmk,indicator-leds";
+
+        caps_lock_indicator: caps_lock {
+            indicator = <HID_INDICATOR_CAPS_LOCK>;
+            leds = <&caps_lock_led>;
+        };
+    };
+
     aliases {
         ledgreen = &led_0;
         ledred   = &caps_lock_led;
