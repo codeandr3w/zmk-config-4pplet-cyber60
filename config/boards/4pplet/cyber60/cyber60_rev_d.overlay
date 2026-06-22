@@ -52,7 +52,7 @@
             gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
             status = "okay";
         };
-        caps_lock_led: led_red {
+        caps_lock_led: caps_lock_led {
             gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
             status = "okay";
         };
