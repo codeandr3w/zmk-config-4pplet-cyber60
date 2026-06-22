@@ -24,12 +24,12 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #define GREEN 1
 #define BLUE 2
 
-static const struct gpio_dt_spec LED_R = GPIO_DT_SPEC_GET(LED_NODE_R, gpios);
+//Red used for capslock static const struct gpio_dt_spec LED_R = GPIO_DT_SPEC_GET(LED_NODE_R, gpios);
 static const struct gpio_dt_spec LED_G = GPIO_DT_SPEC_GET(LED_NODE_G, gpios);
 static const struct gpio_dt_spec LED_B = GPIO_DT_SPEC_GET(LED_NODE_B, gpios);
 
 void reset_leds() {
-    gpio_pin_configure_dt(&LED_R, GPIO_DISCONNECTED);
+//Red used for capslock     gpio_pin_configure_dt(&LED_R, GPIO_DISCONNECTED);
     gpio_pin_configure_dt(&LED_G, GPIO_DISCONNECTED);
     gpio_pin_configure_dt(&LED_B, GPIO_DISCONNECTED);
 }
@@ -37,7 +37,7 @@ void reset_leds() {
 void set_led_rgb(bool r, bool g, bool b) {
     reset_leds(); // Ensure all LEDs are off before setting the desired color
     if (r) {
-        gpio_pin_configure_dt(&LED_R, GPIO_OUTPUT_LOW); // Drive LOW = ON
+//Red used for capslock         gpio_pin_configure_dt(&LED_R, GPIO_OUTPUT_LOW); // Drive LOW = ON
     }
     if (g) {
         gpio_pin_configure_dt(&LED_G, GPIO_OUTPUT_LOW); // Drive LOW = ON
@@ -63,19 +63,13 @@ int led_listener(const zmk_event_t *eh) {
     k_timer_stop(&led_timer);
     switch (profile_ev->index) {
         case 0:
-            set_led_rgb(true, false, false); // Red
+            set_led_rgb(false, true, true); // magenta
             break;
         case 1:
             set_led_rgb(false, true, false); // Green
             break;
         case 2:
             set_led_rgb(false, false, true); // Blue
-            break;
-        case 3:
-            set_led_rgb(true, true, false); // Yellow
-            break;
-        case 4:
-            set_led_rgb(true, false, true); // Magenta
             break;
         default:
             reset_leds();
