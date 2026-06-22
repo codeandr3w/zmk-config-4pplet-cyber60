@@ -43,7 +43,7 @@
             // | Rotary | (<-- Rotary switch) ----------------------------------------------------------- 
 
             bindings = <
-            &kp ESC	    &kp F1		&kp F2          &kp F3          &kp F4          &kp F5          &kp F6          &kp F7          &kp F8  		&kp F9	&kp F10  &kp F11  &kp F12 &kp NUBS  &kp DEL
+            &kp ESC	    &kp F1		&kp F2          &kp F3          &kp F4          &kp F5          &kp F6          &kp F7          &kp F8  		&kp F9	&kp F10  &kp F11  &kp F12 &kp GRAVE  &kp DEL
             &bt BT_CLR	&bt BT_NXT	&mmv MOVE_UP     		&bt BT_SEL 0    &bootloader     &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none  		&none  &kp PSCRN   &kp UP   &kp PG_UP  &none
             &mt LCTRL CLCK &mmv MOVE_LEFT	&mmv MOVE_DOWN        &mmv MOVE_RIGHT       &none          &none          &none          &none          &kp HOME  		&kp END  &kp LEFT   &kp RIGHT   &kp PG_DN  &none
             &kp LSHFT	&trans		&rgb_ug RGB_TOG	&rgb_ug RGB_BRI	&rgb_ug RGB_EFR	&rgb_ug RGB_HUD	&rgb_ug RGB_HUI	&rgb_ug RGB_SAD	&rgb_ug RGB_SAI &msc SCRL_UP  &msc SCRL_DOWN   &kp DOWN   &trans  &trans
