@@ -8,6 +8,7 @@
 #include "cyber60_rev_d-pinctrl.dtsi"
 #include "cyber60_rev_d-layouts.dtsi"
 #include "cyber60_rev_d-transforms.dtsi"
+#include <dt-bindings/zmk/hid_indicators.h>
 
 / {
     model = "CYBER60_REV_D";
