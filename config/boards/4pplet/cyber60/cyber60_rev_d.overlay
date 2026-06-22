@@ -52,7 +52,7 @@
             gpios = <&gpio0 5 GPIO_ACTIVE_LOW>;
             status = "okay";
         };
-        led_1: led_red {
+        caps_lock_led: led_red {
             gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
             status = "okay";
         };
@@ -64,7 +64,7 @@
 
     aliases {
         ledgreen = &led_0;
-        ledred   = &led_1;
+        ledred   = &caps_lock_led;
         ledblue  = &led_2;
         buzzer = &buzzer;
     };
